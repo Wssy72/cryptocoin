@@ -9,12 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-// ok, google123
+    @IBOutlet weak var tableView: UITableView!
+    // ok, google123
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // request ("https://.response.JSON") { response in
+// print(response)
+        
     }
 
-
+    class CryptoMoney {
+    var id = 0
+    var name : String = ""
+    var price : Float = 0.0
+    }
 }
 

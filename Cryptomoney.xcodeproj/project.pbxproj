@@ -12,6 +12,7 @@
 		1814F53E220DA9E800AA5A26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1814F53C220DA9E800AA5A26 /* Main.storyboard */; };
 		1814F540220DA9EA00AA5A26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1814F53F220DA9EA00AA5A26 /* Assets.xcassets */; };
 		1814F543220DA9EA00AA5A26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1814F541220DA9EA00AA5A26 /* LaunchScreen.storyboard */; };
+		4E53126F18C625E1E0EE9FA2 /* Pods_Cryptomoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938A94EB52139E3FFEACA6A6 /* Pods_Cryptomoney.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,10 @@
 		1814F53F220DA9EA00AA5A26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1814F542220DA9EA00AA5A26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1814F544220DA9EA00AA5A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18A364182212FCC200E65C8A /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D799F5F996099D2F12E7C35 /* Pods-Cryptomoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptomoney.debug.xcconfig"; path = "Target Support Files/Pods-Cryptomoney/Pods-Cryptomoney.debug.xcconfig"; sourceTree = "<group>"; };
+		938A94EB52139E3FFEACA6A6 /* Pods_Cryptomoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptomoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF6F60E7CC83A0E684C80EF1 /* Pods-Cryptomoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptomoney.release.xcconfig"; path = "Target Support Files/Pods-Cryptomoney/Pods-Cryptomoney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E53126F18C625E1E0EE9FA2 /* Pods_Cryptomoney.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +46,8 @@
 			children = (
 				1814F537220DA9E800AA5A26 /* Cryptomoney */,
 				1814F536220DA9E800AA5A26 /* Products */,
+				7B3A75F91F11D54AA2E3E597 /* Pods */,
+				43135818A40240A28EA763AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +72,24 @@
 			path = Cryptomoney;
 			sourceTree = "<group>";
 		};
+		43135818A40240A28EA763AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18A364182212FCC200E65C8A /* Alamofire.framework */,
+				938A94EB52139E3FFEACA6A6 /* Pods_Cryptomoney.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B3A75F91F11D54AA2E3E597 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D799F5F996099D2F12E7C35 /* Pods-Cryptomoney.debug.xcconfig */,
+				FF6F60E7CC83A0E684C80EF1 /* Pods-Cryptomoney.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +97,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1814F547220DA9EA00AA5A26 /* Build configuration list for PBXNativeTarget "Cryptomoney" */;
 			buildPhases = (
+				F5304FDBDDC922E254758383 /* [CP] Check Pods Manifest.lock */,
 				1814F531220DA9E800AA5A26 /* Sources */,
 				1814F532220DA9E800AA5A26 /* Frameworks */,
 				1814F533220DA9E800AA5A26 /* Resources */,
+				0BB76033A5921D4C38830920 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +157,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BB76033A5921D4C38830920 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cryptomoney/Pods-Cryptomoney-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cryptomoney/Pods-Cryptomoney-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5304FDBDDC922E254758383 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cryptomoney-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1814F531220DA9E800AA5A26 /* Sources */ = {
@@ -280,6 +355,7 @@
 		};
 		1814F548220DA9EA00AA5A26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D799F5F996099D2F12E7C35 /* Pods-Cryptomoney.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +374,7 @@
 		};
 		1814F549220DA9EA00AA5A26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF6F60E7CC83A0E684C80EF1 /* Pods-Cryptomoney.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
