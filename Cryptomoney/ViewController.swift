@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -14,15 +15,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // request ("https://.response.JSON") { response in
-// print(response)
+        let url = "http://sandbox.coinmarketcap.com"
         
-    }
-
-    class CryptoMoney {
-    var id = 0
-    var name : String = ""
-    var price : Float = 0.0
+        request(url).responseJSON { response in
+            
+            print(response)
+        }
+        print("viewDidLoad ended")
     }
 }
+    //class CryptoMoney {
+    //var id = 0
+    //var name : String = ""
+    //var price : Float = 0.0
+    //}
+
+
 
