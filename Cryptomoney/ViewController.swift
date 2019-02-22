@@ -7,23 +7,32 @@
 //
 
 import UIKit
-import Alamofire
+//import Alamofire
 
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    // ok, google123
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = "http://sandbox.coinmarketcap.com"
+        //let urlRequest =
+        //let test = "https://api.coinmarketcap.com/v1/ticker/"
+        //let apiKey = "CMC_PRO_API_KEY", "0a5b109a-5a84-4700-89f6-97b14d373aaf"
         
-        request(url).responseJSON { response in
+        
+        
+        //request( "https://api.coinmarketcap.com/v1/ticker").responseJSON { response in
+            //print(response)
             
-            print(response)
+            //guard let arrayOfiItems = response.result.valuee as [[String:AnyObject]]
+            //else [
+            //print("I don't translate in Json")
+            //return
         }
-        print("viewDidLoad ended")
+        
+        //print("viewDidLoad ended")
     }
-}
+//}
     //class CryptoMoney {
     //var id = 0
     //var name : String = ""
