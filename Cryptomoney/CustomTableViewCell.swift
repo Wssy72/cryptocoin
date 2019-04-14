@@ -1,0 +1,28 @@
+//
+//  CustomTableViewCell.swift
+//  Cryptomoney
+//
+//  Created by Sergey on 14/04/2019.
+//  Copyright © 2019 Sergey Yakovlev. All rights reserved.
+//
+
+import UIKit
+
+class CustomTableViewCell: UITableViewCell {
+
+    
+    @IBOutlet weak var IdMoney: UILabel!
+    @IBOutlet weak var NameMoney: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
+}

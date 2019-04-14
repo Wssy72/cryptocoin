@@ -13,6 +13,8 @@
 		1814F540220DA9EA00AA5A26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1814F53F220DA9EA00AA5A26 /* Assets.xcassets */; };
 		1814F543220DA9EA00AA5A26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1814F541220DA9EA00AA5A26 /* LaunchScreen.storyboard */; };
 		4E53126F18C625E1E0EE9FA2 /* Pods_Cryptomoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938A94EB52139E3FFEACA6A6 /* Pods_Cryptomoney.framework */; };
+		A51BE08A22632F8700B39E09 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51BE08922632F8700B39E09 /* CustomTableViewCell.swift */; };
+		A580940D2220195B00F49658 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A580940C2220195B00F49658 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		18A364182212FCC200E65C8A /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D799F5F996099D2F12E7C35 /* Pods-Cryptomoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptomoney.debug.xcconfig"; path = "Target Support Files/Pods-Cryptomoney/Pods-Cryptomoney.debug.xcconfig"; sourceTree = "<group>"; };
 		938A94EB52139E3FFEACA6A6 /* Pods_Cryptomoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptomoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A51BE08922632F8700B39E09 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		A580940C2220195B00F49658 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF6F60E7CC83A0E684C80EF1 /* Pods-Cryptomoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptomoney.release.xcconfig"; path = "Target Support Files/Pods-Cryptomoney/Pods-Cryptomoney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -34,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A580940D2220195B00F49658 /* Alamofire.framework in Frameworks */,
 				4E53126F18C625E1E0EE9FA2 /* Pods_Cryptomoney.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,6 +73,7 @@
 				1814F53F220DA9EA00AA5A26 /* Assets.xcassets */,
 				1814F541220DA9EA00AA5A26 /* LaunchScreen.storyboard */,
 				1814F544220DA9EA00AA5A26 /* Info.plist */,
+				A51BE08922632F8700B39E09 /* CustomTableViewCell.swift */,
 			);
 			path = Cryptomoney;
 			sourceTree = "<group>";
@@ -75,6 +81,7 @@
 		43135818A40240A28EA763AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A580940C2220195B00F49658 /* Alamofire.framework */,
 				18A364182212FCC200E65C8A /* Alamofire.framework */,
 				938A94EB52139E3FFEACA6A6 /* Pods_Cryptomoney.framework */,
 			);
@@ -210,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A51BE08A22632F8700B39E09 /* CustomTableViewCell.swift in Sources */,
 				1814F53B220DA9E800AA5A26 /* ViewController.swift in Sources */,
 				1814F539220DA9E800AA5A26 /* AppDelegate.swift in Sources */,
 			);
@@ -361,6 +369,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JZ7JR26FGJ;
 				INFOPLIST_FILE = Cryptomoney/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,6 +389,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JZ7JR26FGJ;
 				INFOPLIST_FILE = Cryptomoney/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
