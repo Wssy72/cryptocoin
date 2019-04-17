@@ -10,10 +10,7 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
 
-    
-    @IBOutlet weak var IdMoney: UILabel!
-    @IBOutlet weak var NameMoney: UILabel!
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

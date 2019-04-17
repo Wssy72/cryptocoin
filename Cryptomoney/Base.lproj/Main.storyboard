@@ -13,23 +13,13 @@
         <!--OnePage-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="OnePage" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="OnePage" id="BYZ-38-t0r" customClass="ViewController" customModule="Cryptomoney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Cd-Gg-3wz">
-                                <rect key="frame" x="162" y="75" width="51" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Update"/>
-                                <connections>
-                                    <action selector="requestDate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FGC-P9-Rvs"/>
-                                    <action selector="requestDateWithServer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m8N-bz-qTg"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3zD-uT-14i">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3zD-uT-14i">
                                 <rect key="frame" x="0.0" y="113" width="375" height="609"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="12" reuseIdentifier="Cell" rowHeight="86" id="GRt-Vx-zxJ" customClass="CustomTableViewCell" customModule="Cryptomoney" customModuleProvider="target">
@@ -39,44 +29,62 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="85.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukl-29-cwB">
-                                                    <rect key="frame" x="29" y="0.0" width="15" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMc-fC-zdT">
+                                                    <rect key="frame" x="14" y="10" width="45" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMc-fC-zdT">
-                                                    <rect key="frame" x="15" y="29" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukl-29-cwB">
+                                                    <rect key="frame" x="29" y="-17" width="15" height="19"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="19" id="3Em-Un-rbA"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="EMc-fC-zdT" firstAttribute="top" secondItem="ukl-29-cwB" secondAttribute="bottom" constant="8" symbolic="YES" id="47M-Vu-jFo"/>
+                                                <constraint firstItem="ukl-29-cwB" firstAttribute="centerX" secondItem="EMc-fC-zdT" secondAttribute="centerX" id="96n-Pn-OSN"/>
+                                                <constraint firstItem="ukl-29-cwB" firstAttribute="top" secondItem="YSr-J5-qaI" secondAttribute="topMargin" constant="-28" id="gIi-WM-qkG"/>
+                                                <constraint firstItem="ukl-29-cwB" firstAttribute="leading" secondItem="YSr-J5-qaI" secondAttribute="leadingMargin" constant="14" id="zoG-iA-iXd"/>
+                                            </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="IdMoney" destination="ukl-29-cwB" id="cFd-U7-yCA"/>
-                                            <outlet property="NameMoney" destination="EMc-fC-zdT" id="chg-sC-3Jh"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Csa-z3-eFZ"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JMK-uY-son"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="yek-YB-W4F"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="cAU-ZP-f5W"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Cd-Gg-3wz">
+                                <rect key="frame" x="162" y="62" width="51" height="30"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="Update:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lEp-3i-U9D"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4Cd-Gg-3wz" firstAttribute="centerX" secondItem="3zD-uT-14i" secondAttribute="centerX" id="C8R-On-9C6"/>
+                            <constraint firstItem="3zD-uT-14i" firstAttribute="top" secondItem="4Cd-Gg-3wz" secondAttribute="bottom" constant="21" id="GGn-bd-fAn"/>
+                            <constraint firstItem="4Cd-Gg-3wz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kfj-Qr-8Rc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3zD-uT-14i" secondAttribute="bottom" constant="56" id="UU4-yD-bc4"/>
+                            <constraint firstItem="3zD-uT-14i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fgz-Ac-wZw"/>
+                            <constraint firstItem="4Cd-Gg-3wz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="xZb-eY-rf1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="TableMoney" destination="3zD-uT-14i" id="aYt-jz-Jxc"/>
+                        <outlet property="tableViewMoney" destination="3zD-uT-14i" id="mdZ-E7-TkR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5318" y="-1517"/>
+            <point key="canvasLocation" x="-7407" y="-2350"/>
         </scene>
     </scenes>
 </document>

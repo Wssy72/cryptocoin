@@ -11,11 +11,12 @@ import Alamofire
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    fileprivate var items = [Cryptocurrency]()
+    var items = [Cryptocurrency]()
     
-    @IBAction func requestDate(_ sender: UIButton) {
+    @IBAction func Update(_ sender: UIButton) {
     }
-    @IBOutlet weak var TableMoney: UITableView!
+    
+    @IBOutlet weak var tableViewMoney: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,16 +35,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     print("Не могу перевести в массив")
                     return
             }
-            for bustElements in arrayOfItems {
-                let item = Cryptocurrency(id: bustElements["id"] as! Int, name: bustElements["name"] as! String)
-                self.items.append(item)
-            }
+            //for bustElements in arrayOfItems {
+              //  let item = Cryptocurrency(id: bustElements["id"] as! Int, name: bustElements["name"] as! String)
+                //self.items.append(item)
+            //}
         }
-    }
-    
-    struct Cryptocurrency {
-        let id: Int
-        let name: String
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,17 +47,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+      let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
         
-       
-       let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
+        //func configureCell(cell: CustomTableViewCell, for indexPath: IndexPath) {
+        //let currency = items[indexPath.row]
+        //}
         
-        cell.textLabel?.text = "row#\(indexPath.row)"
-        cell.detailTextLabel?.text = "subtitle#\(indexPath.row)"
+        //let currency =  Cryptocurrency(id: 0, name: "test")
+    
+        //cell.NameMoney.text = "currency.name" // "(currency.NameMoney)"
         
         return cell
     
     }
-    
+    struct Cryptocurrency {
+        let id: Int
+        let name: String
+    }
 }
 
 
@@ -72,4 +75,4 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
 // struct CryptoMoney : IUTableViewCell {
 
-//let apiKey = "CMC_PRO_API_KEY", "0a5b109a-5a84-4700-89f6-97b14d373aaf"
+
