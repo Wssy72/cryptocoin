@@ -131,6 +131,7 @@
 				TargetAttributes = {
 					1814F534220DA9E800AA5A26 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -367,16 +368,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JZ7JR26FGJ;
+				DEVELOPMENT_TEAM = TBU99BV36Y;
 				INFOPLIST_FILE = Cryptomoney/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.syakovlev.welcome-xcode.Cryptomoney";
+				PRODUCT_BUNDLE_IDENTIFIER = "syakovlev.welcome-xcode.Cryptomoney";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -387,16 +388,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JZ7JR26FGJ;
+				DEVELOPMENT_TEAM = TBU99BV36Y;
 				INFOPLIST_FILE = Cryptomoney/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.syakovlev.welcome-xcode.Cryptomoney";
+				PRODUCT_BUNDLE_IDENTIFIER = "syakovlev.welcome-xcode.Cryptomoney";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
