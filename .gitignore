@@ -1,0 +1,7 @@
+Pods
+*.lock
+/**/.DS_Store
+/**/xcuserdata
+*.xcworkspace
+*.profraw
+/build

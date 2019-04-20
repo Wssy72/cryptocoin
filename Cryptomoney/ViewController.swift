@@ -11,18 +11,25 @@ import Alamofire
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var items = [Cryptocurrency]()
+    @IBOutlet weak var tableViewMoney: UITableView!
+    
+    var currencies = [Cryptocurrency]()
     
     @IBAction func Update(_ sender: UIButton) {
+        print("Update")
+        loadData()
     }
-    
-    @IBOutlet weak var tableViewMoney: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("This is viewDidLoad")
         view.backgroundColor = UIColor.lightGray // change color
-        
+    
+        loadData()
+    }
+    
+    private func loadData() {
+        print("loadData")
         request ("https://api.coinmarketcap.com/v1/ticker").responseJSON { response in
             guard response.result.isSuccess
                 else {
@@ -35,24 +42,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     print("Не могу перевести в массив")
                     return
             }
-            //for bustElements in arrayOfItems {
-              //  let item = Cryptocurrency(id: bustElements["id"] as! Int, name: bustElements["name"] as! String)
-                //self.items.append(item)
-            //}
+            
+            
+            print(arrayOfItems)
+            for bustElements in arrayOfItems {
+                let item = Cryptocurrency(id: bustElements["id"] as! String, name: bustElements["name"] as! String)
+                
+                self.currencies.append(item)
+            }
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return currencies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
       let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
         
-        //func configureCell(cell: CustomTableViewCell, for indexPath: IndexPath) {
+        func configureCell(cell: CustomTableViewCell, for indexPath: IndexPath) {
         //let currency = items[indexPath.row]
-        //}
+        }
         
         //let currency =  Cryptocurrency(id: 0, name: "test")
     
@@ -61,10 +72,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     
     }
-    struct Cryptocurrency {
-        let id: Int
-        let name: String
-    }
+}
+
+struct Cryptocurrency {
+    let id: String
+    let name: String
 }
 
 
