@@ -78,13 +78,3 @@ struct Cryptocurrency {
     let id: String
     let name: String
 }
-
-
-
-//var id: String = ""
-//var nameCryptoMoney: String = ""
-//var priceInDollars: Int = 0.0
-
-// struct CryptoMoney : IUTableViewCell {
-
-
