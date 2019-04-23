@@ -24,10 +24,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         tableViewMoney.dataSource = self
         tableViewMoney.delegate = self
-        
         print("This is viewDidLoad")
         view.backgroundColor = UIColor.lightGray // change color
-    
         loadData()
     }
     
@@ -67,16 +65,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
       let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
         print(cell)
-        func configureCell(cell: CustomTableViewCell, for indexPath: IndexPath) {
+        
             let currency = currencies[indexPath.row]
             cell.nameLabel.text = currency.name
-        }
     
         return cell
-
     }
 }
-
 struct Cryptocurrency {
     let id: String
     let name: String
