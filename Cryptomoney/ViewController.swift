@@ -22,6 +22,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableViewMoney.dataSource = self
+        tableViewMoney.delegate = self
+        
         print("This is viewDidLoad")
         view.backgroundColor = UIColor.lightGray // change color
     
@@ -43,34 +46,34 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     return
             }
             
-            
             print(arrayOfItems)
             for bustElements in arrayOfItems {
                 let item = Cryptocurrency(id: bustElements["id"] as! String, name: bustElements["name"] as! String)
                 
                 self.currencies.append(item)
             }
+            //DispatchQueue.main.async {
+                 //self.tableView.reloadData()
+            //}
+            //  display data, sync - take turns, async - out of turn
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currencies.count
+        return currencies.count  // display count string in array
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
       let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
-        
+        print(cell)
         func configureCell(cell: CustomTableViewCell, for indexPath: IndexPath) {
-        //let currency = items[indexPath.row]
+            let currency = currencies[indexPath.row]
+            cell.nameLabel.text = currency.name
         }
-        
-        //let currency =  Cryptocurrency(id: 0, name: "test")
     
-        //cell.NameMoney.text = "currency.name" // "(currency.NameMoney)"
-        
         return cell
-    
+
     }
 }
 
