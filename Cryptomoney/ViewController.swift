@@ -62,16 +62,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    //
+    //
       let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
         print(cell)
-        let currency = currencies[indexPath.row]
+        //let currency = currencies[indexPath.row]
         cell.nameLabel.text = "The Currency"
         //currency.name
         return cell
        
         }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
 }
 struct Cryptocurrency {
     let id: String
