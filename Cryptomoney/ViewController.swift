@@ -49,6 +49,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 let item = Cryptocurrency(id: bustElements["id"] as! String, name: bustElements["name"] as! String)
                 self.currencies.append(item)
             }
+            self.tableViewMoney.reloadData()
             //DispatchQueue.main.async {
                  //self.tableView.reloadData()
             //}
@@ -57,19 +58,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-        //currencies.count  // display count string in array
+        return currencies.count
+        // display count string in array
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    //
+    
       let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
         print(cell)
-        //let currency = currencies[indexPath.row]
-        cell.nameLabel.text = "The Currency"
-        //currency.name
+        let currency = currencies[indexPath.row]
+        cell.nameLabel.text = currency.name
+        
         return cell
-       
         }
     
     func numberOfSections(in tableView: UITableView) -> Int {
