@@ -68,6 +68,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         print(cell)
         let currency = currencies[indexPath.row]
         cell.nameLabel.text = currency.name
+        cell.idLabel.text = currency.id
         
         return cell
         }
