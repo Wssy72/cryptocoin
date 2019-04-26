@@ -13,6 +13,8 @@ class CustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var priceUsdLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -29,11 +29,11 @@
                                 <rect key="frame" x="0.0" y="111" width="375" height="637"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="12" reuseIdentifier="Cell" rowHeight="86" id="GRt-Vx-zxJ" customClass="CustomTableViewCell" customModule="Cryptomoney" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="86"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="12" reuseIdentifier="Cell" rowHeight="158" id="GRt-Vx-zxJ" customClass="CustomTableViewCell" customModule="Cryptomoney" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="158"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GRt-Vx-zxJ" id="YSr-J5-qaI">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="85.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="157.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukl-29-cwB">
@@ -51,10 +51,18 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adF-W2-Ix6">
+                                                    <rect key="frame" x="189" y="52" width="163" height="46"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="EMc-fC-zdT" firstAttribute="top" secondItem="ukl-29-cwB" secondAttribute="bottom" constant="8" symbolic="YES" id="47M-Vu-jFo"/>
                                                 <constraint firstItem="ukl-29-cwB" firstAttribute="centerX" secondItem="EMc-fC-zdT" secondAttribute="centerX" id="96n-Pn-OSN"/>
+                                                <constraint firstItem="EMc-fC-zdT" firstAttribute="leading" secondItem="YSr-J5-qaI" secondAttribute="leadingMargin" constant="-2" id="Kxt-tg-76b"/>
                                                 <constraint firstItem="ukl-29-cwB" firstAttribute="top" secondItem="YSr-J5-qaI" secondAttribute="topMargin" constant="-28" id="gIi-WM-qkG"/>
                                                 <constraint firstItem="ukl-29-cwB" firstAttribute="leading" secondItem="YSr-J5-qaI" secondAttribute="leadingMargin" constant="14" id="zoG-iA-iXd"/>
                                             </constraints>
@@ -62,6 +70,7 @@
                                         <connections>
                                             <outlet property="idLabel" destination="ukl-29-cwB" id="exg-ya-x0B"/>
                                             <outlet property="nameLabel" destination="EMc-fC-zdT" id="DER-9J-P79"/>
+                                            <outlet property="priceUsdLabel" destination="adF-W2-Ix6" id="Fu1-z3-BDT"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -88,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9828" y="-2973"/>
+            <point key="canvasLocation" x="-11159.200000000001" y="-2983.0049261083745"/>
         </scene>
     </scenes>
 </document>

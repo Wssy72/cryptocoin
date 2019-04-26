@@ -18,15 +18,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func Update(_ sender: UIButton) {
         print("Update")
         loadData()
+         //self.tableViewMoney.rowHeight 
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewMoney.dataSource = self
         tableViewMoney.delegate = self
+        
         print("This is viewDidLoad")
         view.backgroundColor = UIColor.lightGray // change color
         loadData()
+        
     }
     
     private func loadData() {
@@ -46,18 +49,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             print(arrayOfItems)
             for bustElements in arrayOfItems {
-                let item = Cryptocurrency(id: bustElements["id"] as! String, name: bustElements["name"] as! String)
+                let item = Cryptocurrency(id: bustElements["id"] as! String, name: bustElements["name"] as! String, priceUsdLabel: bustElements["price_usd"] as! String)
+                
                 self.currencies.append(item)
             }
             self.tableViewMoney.reloadData()
+           
+            
             //DispatchQueue.main.async {
-                 //self.tableView.reloadData()
+            
             //}
             //  display data, sync - take turns, async - out of turn
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return currencies.count
         // display count string in array
     }
@@ -67,9 +74,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
       let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
         print(cell)
         let currency = currencies[indexPath.row]
-        cell.nameLabel.text = currency.name
         cell.idLabel.text = currency.id
-        
+        cell.nameLabel.text = currency.name
+        cell.priceUsdLabel.text = currency.priceUsdLabel
         return cell
         }
     
@@ -80,4 +87,5 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 struct Cryptocurrency {
     let id: String
     let name: String
+    let priceUsdLabel: String
 }
