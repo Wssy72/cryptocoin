@@ -18,8 +18,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func Update(_ sender: UIButton) {
         print("Update")
         loadData()
-         //self.tableViewMoney.rowHeight 
+        //self.tableViewMoney.rowHeight
     }
+    @IBOutlet weak var coinsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         print("This is viewDidLoad")
         view.backgroundColor = UIColor.lightGray // change color
+        coinsLabel.text = "Cryptomoney"
+        
         loadData()
         
     }
@@ -56,10 +59,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.tableViewMoney.reloadData()
            
             
-            //DispatchQueue.main.async {
-            
-            //}
-            //  display data, sync - take turns, async - out of turn
         }
     }
     
