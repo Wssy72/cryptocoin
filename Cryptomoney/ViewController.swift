@@ -52,13 +52,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             print(arrayOfItems)
             for bustElements in arrayOfItems {
-                let item = Cryptocurrency(id: bustElements["id"] as! String, name: bustElements["name"] as! String, priceUsdLabel: bustElements["price_usd"] as! String)
+                let item = Cryptocurrency(symbol: bustElements["symbol"] as! String, name: bustElements["name"] as! String, priceUsdLabel: bustElements["price_usd"] as! String)
                 
                 self.currencies.append(item)
             }
             self.tableViewMoney.reloadData()
            
-            
         }
     }
     
@@ -73,7 +72,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
       let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
         print(cell)
         let currency = currencies[indexPath.row]
-        cell.idLabel.text = currency.id
+        
+        cell.symbolLabel.text = currency.symbol
         cell.nameLabel.text = currency.name
         cell.priceUsdLabel.text = currency.priceUsdLabel
         return cell
@@ -84,7 +84,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 }
 struct Cryptocurrency {
-    let id: String
+
+    let symbol: String
     let name: String
     let priceUsdLabel: String
 }
