@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
+    <device id="ipad12_9rounded" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController title="OnePage" id="BYZ-38-t0r" customClass="ViewController" customModule="Cryptomoney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3zD-uT-14i">
-                                <rect key="frame" x="0.0" y="106" width="375" height="605"/>
+                                <rect key="frame" x="0.0" y="674" width="375" height="605"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="605" id="UBg-VQ-hxA"/>
@@ -29,8 +29,8 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="12" reuseIdentifier="Cell" rowHeight="158" id="GRt-Vx-zxJ" customClass="CustomTableViewCell" customModule="Cryptomoney" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="158"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GRt-Vx-zxJ" id="YSr-J5-qaI">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="157.66666666666666"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GRt-Vx-zxJ" id="YSr-J5-qaI">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="157.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symbol" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m93-L8-D9r">
@@ -43,13 +43,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameCoin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMc-fC-zdT">
-                                                    <rect key="frame" x="93" y="15" width="116" height="20"/>
+                                                    <rect key="frame" x="93" y="15" width="40" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PriceUsd" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adF-W2-Ix6">
-                                                    <rect key="frame" x="224" y="15" width="125" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PriceUsd" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adF-W2-Ix6">
+                                                    <rect key="frame" x="224" y="15" width="40" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -70,8 +70,10 @@
                                                 <constraint firstItem="EMc-fC-zdT" firstAttribute="leading" secondItem="YSr-J5-qaI" secondAttribute="leadingMargin" constant="78" id="Z4i-BY-RF2"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="adF-W2-Ix6" secondAttribute="trailing" constant="11" id="bGA-02-MID"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="adF-W2-Ix6" secondAttribute="trailing" constant="11" id="dAE-kA-0g6"/>
+                                                <constraint firstItem="m93-L8-D9r" firstAttribute="width" secondItem="EMc-fC-zdT" secondAttribute="width" id="el3-HC-vAI"/>
                                                 <constraint firstAttribute="trailing" secondItem="adF-W2-Ix6" secondAttribute="trailing" constant="26" id="fwW-LQ-VOn"/>
                                                 <constraint firstItem="EMc-fC-zdT" firstAttribute="top" secondItem="adF-W2-Ix6" secondAttribute="bottom" constant="-21" id="jjO-IN-G1k"/>
+                                                <constraint firstItem="EMc-fC-zdT" firstAttribute="width" secondItem="adF-W2-Ix6" secondAttribute="width" id="n8J-nY-zIK"/>
                                                 <constraint firstItem="m93-L8-D9r" firstAttribute="firstBaseline" secondItem="adF-W2-Ix6" secondAttribute="firstBaseline" constant="-4" id="o6C-rg-XGP"/>
                                                 <constraint firstAttribute="trailing" secondItem="EMc-fC-zdT" secondAttribute="trailing" constant="166" id="tQZ-wU-fAH"/>
                                                 <constraint firstItem="adF-W2-Ix6" firstAttribute="leading" secondItem="YSr-J5-qaI" secondAttribute="leading" constant="224" id="xdv-yC-kkj"/>
@@ -90,16 +92,16 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Cd-Gg-3wz">
-                                <rect key="frame" x="0.0" y="731" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="1299" width="1024" height="30"/>
                                 <state key="normal" title="Update"/>
                                 <connections>
                                     <action selector="Update:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lEp-3i-U9D"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NameApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="42" translatesAutoresizingMaskIntoConstraints="NO" id="WyZ-pQ-3US">
-                                <rect key="frame" x="117" y="57" width="153" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="42" translatesAutoresizingMaskIntoConstraints="NO" id="WyZ-pQ-3US">
+                                <rect key="frame" x="0.0" y="41" width="375" height="613"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="019-d8-Ejj"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="153" id="019-d8-Ejj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -109,12 +111,13 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3zD-uT-14i" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="2.5" id="12r-Yr-tcu"/>
+                            <constraint firstItem="WyZ-pQ-3US" firstAttribute="width" secondItem="3zD-uT-14i" secondAttribute="width" id="4eh-sE-Gal"/>
                             <constraint firstItem="4Cd-Gg-3wz" firstAttribute="top" secondItem="3zD-uT-14i" secondAttribute="bottom" constant="20" id="69u-ZO-S29"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Cd-Gg-3wz" secondAttribute="bottom" constant="17" id="6KH-Xo-DMP"/>
                             <constraint firstItem="4Cd-Gg-3wz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8UU-iP-T84"/>
-                            <constraint firstItem="3zD-uT-14i" firstAttribute="top" secondItem="WyZ-pQ-3US" secondAttribute="bottom" constant="24" id="U1h-7y-3gz"/>
+                            <constraint firstItem="3zD-uT-14i" firstAttribute="top" secondItem="WyZ-pQ-3US" secondAttribute="bottom" constant="20" id="U1h-7y-3gz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3zD-uT-14i" secondAttribute="bottom" constant="67" id="UU4-yD-bc4"/>
-                            <constraint firstItem="WyZ-pQ-3US" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="Xlw-j0-a15"/>
+                            <constraint firstItem="WyZ-pQ-3US" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="Xlw-j0-a15"/>
                             <constraint firstItem="3zD-uT-14i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d8H-pE-0Iw"/>
                             <constraint firstItem="3zD-uT-14i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fgz-Ac-wZw"/>
                             <constraint firstItem="3zD-uT-14i" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="2.5" id="hdf-A8-zer"/>
@@ -131,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-12231.200000000001" y="-4789.6551724137935"/>
+            <point key="canvasLocation" x="-14174" y="-5010"/>
         </scene>
     </scenes>
 </document>

@@ -83,9 +83,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return 1
     }
 }
-struct Cryptocurrency {
-
-    let symbol: String
-    let name: String
-    let priceUsdLabel: String
-}
+//struct Cryptocurrency {
+//
+//    let symbol: String
+//    let name: String
+//    let priceUsdLabel: String
+//}
