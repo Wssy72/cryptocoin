@@ -10,20 +10,32 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var symbolLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var priceUsdLabel: UILabel!
+    @IBOutlet private weak var symbolLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var priceUsdLabel: UILabel!
+    @IBOutlet private weak var favoriteButton: UIButton!
     
+    private var currency: Cryptocurrency?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    func draw(currency: Cryptocurrency) {
+        self.currency = currency
+        symbolLabel.text = currency.symbol
+        nameLabel.text = currency.name
+        priceUsdLabel.text = currency.priceUsdLabel
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
 
+    @IBAction func favoriteTap(_ sender: Any) {
+        print("Tap \(currency?.symbol ?? "UNKNOWN")")
+    }
 }

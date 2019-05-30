@@ -15,6 +15,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var currencies = [Cryptocurrency]()
     
+//    var addCoinsInFavorites = item[]
+    
     @IBAction func Update(_ sender: UIButton) {
         print("Update")
         loadData()
@@ -24,8 +26,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableViewMoney.dataSource = self
-        tableViewMoney.delegate = self
+        //tableViewMoney.dataSource = self
+        //tableViewMoney.delegate = self
         
         print("This is viewDidLoad")
         view.backgroundColor = UIColor.lightGray // change color
@@ -53,11 +55,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             print(arrayOfItems)
             for bustElements in arrayOfItems {
                 let item = Cryptocurrency(symbol: bustElements["symbol"] as! String, name: bustElements["name"] as! String, priceUsdLabel: bustElements["price_usd"] as! String)
-                
+                // add new element cryptocurrency
                 self.currencies.append(item)
             }
             self.tableViewMoney.reloadData()
-           
+            // func addCoinsInFavorites(), func append(element) - add element in end array
         }
     }
     
@@ -68,24 +70,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
       let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
-        print(cell)
-        let currency = currencies[indexPath.row]
-        
-        cell.symbolLabel.text = currency.symbol
-        cell.nameLabel.text = currency.name
-        cell.priceUsdLabel.text = currency.priceUsdLabel
+        cell.draw(currency: currencies[indexPath.row])
         return cell
-        }
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 }
-//struct Cryptocurrency {
-//
-//    let symbol: String
-//    let name: String
-//    let priceUsdLabel: String
-//}
