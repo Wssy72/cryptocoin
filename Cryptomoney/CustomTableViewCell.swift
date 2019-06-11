@@ -14,6 +14,7 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var priceUsdLabel: UILabel!
     @IBOutlet private weak var favoriteButton: UIButton!
+    var favoriteState = false
     
     private var currency: Cryptocurrency?
     
@@ -27,6 +28,7 @@ class CustomTableViewCell: UITableViewCell {
         symbolLabel.text = currency.symbol
         nameLabel.text = currency.name
         priceUsdLabel.text = currency.priceUsdLabel
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,7 +37,16 @@ class CustomTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    @IBAction func favoriteTap(_ sender: Any) {
-        print("Tap \(currency?.symbol ?? "UNKNOWN")")
-    }
+    @IBAction func favoriteTap(_ sender: UIButton) {
+        favoriteState = !favoriteState
+        if favoriteState {
+        sender.setTitle("★", for: .normal)
+        sender.setTitleColor(.black, for: .normal)
+        } else {
+            sender.setTitle("☆", for: .normal)
+            sender.setTitleColor(.black, for: .normal)
+        
+        //print("Tap \(currency?.name ?? "UNKNOWN")")
+}
+}
 }

@@ -9,4 +9,5 @@ struct Cryptocurrency {
     let symbol: String
     let name: String
     let priceUsdLabel: String
+    var favoriteState: Bool
 }

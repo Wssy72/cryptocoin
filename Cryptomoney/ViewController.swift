@@ -54,15 +54,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             print(arrayOfItems)
             for bustElements in arrayOfItems {
-                let item = Cryptocurrency(symbol: bustElements["symbol"] as! String, name: bustElements["name"] as! String, priceUsdLabel: bustElements["price_usd"] as! String)
+                let item = Cryptocurrency(symbol: bustElements["symbol"] as! String, name: bustElements["name"] as! String, priceUsdLabel: bustElements["price_usd"] as! String, favoriteState: false)
                 // add new element cryptocurrency
                 self.currencies.append(item)
             }
             self.tableViewMoney.reloadData()
-            // func addCoinsInFavorites(), func append(element) - add element in end array
         }
     }
-    
+    //bustElements["bool"] as!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return currencies.count
