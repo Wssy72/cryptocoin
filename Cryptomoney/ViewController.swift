@@ -63,7 +63,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     //bustElements["bool"] as!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return currencies.count
         // display count string in array
     }

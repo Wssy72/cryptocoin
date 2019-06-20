@@ -16,7 +16,6 @@
 		A51BE08A22632F8700B39E09 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51BE08922632F8700B39E09 /* CustomTableViewCell.swift */; };
 		A52E3A19226AEF18003FF156 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A52E3A18226AEF18003FF156 /* .gitignore */; };
 		A580940D2220195B00F49658 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A580940C2220195B00F49658 /* Alamofire.framework */; };
-		A5C1DC80227878BC00017E84 /* CryptoMoney-30.04.19-Min.png in Resources */ = {isa = PBXBuildFile; fileRef = A5C1DC7F227878BC00017E84 /* CryptoMoney-30.04.19-Min.png */; };
 		A5C1DC822295252300017E84 /* Cryptocurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C1DC812295252300017E84 /* Cryptocurrency.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +33,6 @@
 		A51BE08922632F8700B39E09 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		A52E3A18226AEF18003FF156 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A580940C2220195B00F49658 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5C1DC7F227878BC00017E84 /* CryptoMoney-30.04.19-Min.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CryptoMoney-30.04.19-Min.png"; path = "../../../CryptoMoney-30.04.19-Min.png"; sourceTree = "<group>"; };
 		A5C1DC812295252300017E84 /* Cryptocurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cryptocurrency.swift; sourceTree = SOURCE_ROOT; };
 		FF6F60E7CC83A0E684C80EF1 /* Pods-Cryptomoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptomoney.release.xcconfig"; path = "Target Support Files/Pods-Cryptomoney/Pods-Cryptomoney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,7 +77,6 @@
 				1814F53C220DA9E800AA5A26 /* Main.storyboard */,
 				1814F53F220DA9EA00AA5A26 /* Assets.xcassets */,
 				1814F541220DA9EA00AA5A26 /* LaunchScreen.storyboard */,
-				A5C1DC7F227878BC00017E84 /* CryptoMoney-30.04.19-Min.png */,
 				1814F544220DA9EA00AA5A26 /* Info.plist */,
 				A5C1DC812295252300017E84 /* Cryptocurrency.swift */,
 				A51BE08922632F8700B39E09 /* CustomTableViewCell.swift */,
@@ -168,7 +165,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A52E3A19226AEF18003FF156 /* .gitignore in Resources */,
-				A5C1DC80227878BC00017E84 /* CryptoMoney-30.04.19-Min.png in Resources */,
 				1814F543220DA9EA00AA5A26 /* LaunchScreen.storyboard in Resources */,
 				1814F540220DA9EA00AA5A26 /* Assets.xcassets in Resources */,
 				1814F53E220DA9E800AA5A26 /* Main.storyboard in Resources */,
