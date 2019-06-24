@@ -13,7 +13,7 @@
         <!--OnePage-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="OnePage" id="BYZ-38-t0r" customClass="ViewController" customModule="Cryptomoney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="OnePage" id="BYZ-38-t0r" customClass="MainScreenView" customModule="Cryptomoney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-15292" y="-5260"/>
+            <point key="canvasLocation" x="-15522" y="-5274"/>
         </scene>
     </scenes>
 </document>

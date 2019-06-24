@@ -9,8 +9,9 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MainScreenView: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var coinsLabel: UILabel!
     @IBOutlet weak var tableViewMoney: UITableView!
     
     var currencies = [Cryptocurrency]()
@@ -22,7 +23,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         loadData()
         //self.tableViewMoney.rowHeight
     }
-    @IBOutlet weak var coinsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
