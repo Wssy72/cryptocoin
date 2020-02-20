@@ -31,7 +31,7 @@ class MainScreenView: UIViewController, UITableViewDataSource, UITableViewDelega
         
         print("This is viewDidLoad")
         view.backgroundColor = UIColor.lightGray // change color
-        coinsLabel.text = "Cryptomoney"
+        //coinsLabel.text = "Cryptomoney"
         
         loadData()
         
@@ -76,4 +76,16 @@ class MainScreenView: UIViewController, UITableViewDataSource, UITableViewDelega
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    func tableView(_: UITableView, didDeselectRowAt didDeselectItemAt: IndexPath) {
+        
+        let fullScreen = FullScreenPage()
+        
+        if navigationController != nil {
+            navigationController?.pushViewController(fullScreen, animated: true)
+        }
+        
+         print("Yes, I select")
+        
+    }
+    
 }

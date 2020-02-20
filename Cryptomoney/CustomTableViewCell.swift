@@ -15,6 +15,7 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet private weak var priceUsdLabel: UILabel!
     @IBOutlet private weak var favoriteButton: UIButton!
     var favoriteState = false
+    var cellState = false
     
     private var currency: Cryptocurrency?
     
@@ -52,6 +53,10 @@ class CustomTableViewCell: UITableViewCell {
         favoriteState = !favoriteState
         changeState()
         //print("Tap \(currency?.name ?? "UNKNOWN")")
+    }
+    func tapOnCell () {
+        // функция которая вызывает 2 экран при нажатии на ячейку
+        
     }
 }
 

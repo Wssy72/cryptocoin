@@ -10,16 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--OnePage-->
+        <!--MainScreenView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="OnePage" id="BYZ-38-t0r" customClass="MainScreenView" customModule="Cryptomoney" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MainScreenView" id="BYZ-38-t0r" customClass="MainScreenView" customModule="Cryptomoney" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3zD-uT-14i">
-                                <rect key="frame" x="0.0" y="155" width="375" height="507"/>
+                                <rect key="frame" x="0.0" y="57" width="375" height="605"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="605" id="UBg-VQ-hxA"/>
@@ -110,44 +110,64 @@
                                     <action selector="Update:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lEp-3i-U9D"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="42" translatesAutoresizingMaskIntoConstraints="NO" id="WyZ-pQ-3US">
-                                <rect key="frame" x="0.0" y="61" width="375" height="74"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="153" id="019-d8-Ejj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3zD-uT-14i" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="2.5" id="12r-Yr-tcu"/>
-                            <constraint firstItem="WyZ-pQ-3US" firstAttribute="width" secondItem="3zD-uT-14i" secondAttribute="width" id="4eh-sE-Gal"/>
                             <constraint firstItem="4Cd-Gg-3wz" firstAttribute="top" secondItem="3zD-uT-14i" secondAttribute="bottom" constant="20" id="69u-ZO-S29"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Cd-Gg-3wz" secondAttribute="bottom" constant="17" id="6KH-Xo-DMP"/>
                             <constraint firstItem="4Cd-Gg-3wz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8UU-iP-T84"/>
-                            <constraint firstItem="3zD-uT-14i" firstAttribute="top" secondItem="WyZ-pQ-3US" secondAttribute="bottom" constant="20" id="U1h-7y-3gz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3zD-uT-14i" secondAttribute="bottom" constant="67" id="UU4-yD-bc4"/>
-                            <constraint firstItem="WyZ-pQ-3US" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="Xlw-j0-a15"/>
                             <constraint firstItem="3zD-uT-14i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d8H-pE-0Iw"/>
                             <constraint firstItem="3zD-uT-14i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fgz-Ac-wZw"/>
                             <constraint firstItem="3zD-uT-14i" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="2.5" id="hdf-A8-zer"/>
                             <constraint firstItem="3zD-uT-14i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iTc-9k-pKM"/>
                             <constraint firstItem="4Cd-Gg-3wz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pkh-ku-p5f"/>
-                            <constraint firstItem="WyZ-pQ-3US" firstAttribute="centerX" secondItem="3zD-uT-14i" secondAttribute="centerX" id="rvj-Nn-MkO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="coinsLabel" destination="WyZ-pQ-3US" id="5v6-An-S0R"/>
                         <outlet property="tableViewMoney" destination="3zD-uT-14i" id="mdZ-E7-TkR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-15522" y="-5274"/>
+            <point key="canvasLocation" x="-15774" y="-5294"/>
+        </scene>
+        <!--FullScreenPage-->
+        <scene sceneID="MQm-aD-2Ab">
+            <objects>
+                <viewController title="FullScreenPage" id="1pd-NG-FLH" customClass="FullScreenPage" customModule="Cryptomoney" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mwe-ph-xYw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXb-Ri-PZo">
+                                <rect key="frame" x="163.25490196078681" y="429" width="49" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Label" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MPd-n3-DjX">
+                                <rect key="frame" x="14.540106951877533" y="391.00000000000091" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6xb-Vt-IZk"/>
+                    </view>
+                    <connections>
+                        <outlet property="LabelOut" destination="MPd-n3-DjX" id="dFF-RF-iF3"/>
+                        <outlet property="labelOutput" destination="MPd-n3-DjX" id="WBR-7J-FfT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R92-LQ-3Wd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15111" y="-5294"/>
         </scene>
     </scenes>
 </document>
