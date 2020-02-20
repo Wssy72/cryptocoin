@@ -17,6 +17,9 @@
 		A52E3A19226AEF18003FF156 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A52E3A18226AEF18003FF156 /* .gitignore */; };
 		A580940D2220195B00F49658 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A580940C2220195B00F49658 /* Alamofire.framework */; };
 		A5C1DC822295252300017E84 /* Cryptocurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C1DC812295252300017E84 /* Cryptocurrency.swift */; };
+		A5C1DC8C22C0F9D700017E84 /* FullScreenPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C1DC8B22C0F9D700017E84 /* FullScreenPage.swift */; };
+		A5C1DC8E22DE251200017E84 /* MainScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C1DC8D22DE251200017E84 /* MainScreenView.xib */; };
+		A5FDFD9A232FA4C80013D0EA /* Cryptomoney.app in Resources */ = {isa = PBXBuildFile; fileRef = 1814F535220DA9E800AA5A26 /* Cryptomoney.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,8 @@
 		A52E3A18226AEF18003FF156 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A580940C2220195B00F49658 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C1DC812295252300017E84 /* Cryptocurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cryptocurrency.swift; sourceTree = SOURCE_ROOT; };
+		A5C1DC8B22C0F9D700017E84 /* FullScreenPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenPage.swift; sourceTree = "<group>"; };
+		A5C1DC8D22DE251200017E84 /* MainScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreenView.xib; sourceTree = "<group>"; };
 		FF6F60E7CC83A0E684C80EF1 /* Pods-Cryptomoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptomoney.release.xcconfig"; path = "Target Support Files/Pods-Cryptomoney/Pods-Cryptomoney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,12 +79,14 @@
 			children = (
 				1814F538220DA9E800AA5A26 /* AppDelegate.swift */,
 				1814F53A220DA9E800AA5A26 /* MainScreenView.swift */,
+				A5C1DC8B22C0F9D700017E84 /* FullScreenPage.swift */,
 				1814F53C220DA9E800AA5A26 /* Main.storyboard */,
 				1814F53F220DA9EA00AA5A26 /* Assets.xcassets */,
 				1814F541220DA9EA00AA5A26 /* LaunchScreen.storyboard */,
 				1814F544220DA9EA00AA5A26 /* Info.plist */,
 				A5C1DC812295252300017E84 /* Cryptocurrency.swift */,
 				A51BE08922632F8700B39E09 /* CustomTableViewCell.swift */,
+				A5C1DC8D22DE251200017E84 /* MainScreenView.xib */,
 			);
 			path = Cryptomoney;
 			sourceTree = "<group>";
@@ -165,8 +172,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A52E3A19226AEF18003FF156 /* .gitignore in Resources */,
+				A5FDFD9A232FA4C80013D0EA /* Cryptomoney.app in Resources */,
 				1814F543220DA9EA00AA5A26 /* LaunchScreen.storyboard in Resources */,
 				1814F540220DA9EA00AA5A26 /* Assets.xcassets in Resources */,
+				A5C1DC8E22DE251200017E84 /* MainScreenView.xib in Resources */,
 				1814F53E220DA9E800AA5A26 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +237,7 @@
 				A51BE08A22632F8700B39E09 /* CustomTableViewCell.swift in Sources */,
 				1814F53B220DA9E800AA5A26 /* MainScreenView.swift in Sources */,
 				1814F539220DA9E800AA5A26 /* AppDelegate.swift in Sources */,
+				A5C1DC8C22C0F9D700017E84 /* FullScreenPage.swift in Sources */,
 				A5C1DC822295252300017E84 /* Cryptocurrency.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +385,7 @@
 			baseConfigurationReference = 5D799F5F996099D2F12E7C35 /* Pods-Cryptomoney.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TBU99BV36Y;
 				INFOPLIST_FILE = Cryptomoney/Info.plist;
@@ -385,7 +396,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "syakovlev.welcome-xcode.Cryptomoney";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -394,6 +407,7 @@
 			baseConfigurationReference = FF6F60E7CC83A0E684C80EF1 /* Pods-Cryptomoney.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TBU99BV36Y;
 				INFOPLIST_FILE = Cryptomoney/Info.plist;
@@ -404,7 +418,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "syakovlev.welcome-xcode.Cryptomoney";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
