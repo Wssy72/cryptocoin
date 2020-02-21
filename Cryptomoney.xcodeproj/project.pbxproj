@@ -18,7 +18,6 @@
 		A580940D2220195B00F49658 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A580940C2220195B00F49658 /* Alamofire.framework */; };
 		A5C1DC822295252300017E84 /* Cryptocurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C1DC812295252300017E84 /* Cryptocurrency.swift */; };
 		A5C1DC8C22C0F9D700017E84 /* FullScreenPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C1DC8B22C0F9D700017E84 /* FullScreenPage.swift */; };
-		A5C1DC8E22DE251200017E84 /* MainScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C1DC8D22DE251200017E84 /* MainScreenView.xib */; };
 		A5FDFD9A232FA4C80013D0EA /* Cryptomoney.app in Resources */ = {isa = PBXBuildFile; fileRef = 1814F535220DA9E800AA5A26 /* Cryptomoney.app */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +37,6 @@
 		A580940C2220195B00F49658 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C1DC812295252300017E84 /* Cryptocurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cryptocurrency.swift; sourceTree = SOURCE_ROOT; };
 		A5C1DC8B22C0F9D700017E84 /* FullScreenPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenPage.swift; sourceTree = "<group>"; };
-		A5C1DC8D22DE251200017E84 /* MainScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreenView.xib; sourceTree = "<group>"; };
 		FF6F60E7CC83A0E684C80EF1 /* Pods-Cryptomoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptomoney.release.xcconfig"; path = "Target Support Files/Pods-Cryptomoney/Pods-Cryptomoney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +84,6 @@
 				1814F544220DA9EA00AA5A26 /* Info.plist */,
 				A5C1DC812295252300017E84 /* Cryptocurrency.swift */,
 				A51BE08922632F8700B39E09 /* CustomTableViewCell.swift */,
-				A5C1DC8D22DE251200017E84 /* MainScreenView.xib */,
 			);
 			path = Cryptomoney;
 			sourceTree = "<group>";
@@ -175,7 +172,6 @@
 				A5FDFD9A232FA4C80013D0EA /* Cryptomoney.app in Resources */,
 				1814F543220DA9EA00AA5A26 /* LaunchScreen.storyboard in Resources */,
 				1814F540220DA9EA00AA5A26 /* Assets.xcassets in Resources */,
-				A5C1DC8E22DE251200017E84 /* MainScreenView.xib in Resources */,
 				1814F53E220DA9E800AA5A26 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
