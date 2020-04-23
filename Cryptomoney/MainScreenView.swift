@@ -76,16 +76,6 @@ class MainScreenView: UIViewController, UITableViewDataSource, UITableViewDelega
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    func tableView(_: UITableView, didDeselectRowAt didDeselectItemAt: IndexPath) {
-        
-        let fullScreen = FullScreenPage()
-        
-        if navigationController != nil {
-            navigationController?.pushViewController(fullScreen, animated: true)
-        }
-        
-         print("Yes, I select")
-        
-    }
+    
     
 }
