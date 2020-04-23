@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,7 +18,6 @@
 		A580940D2220195B00F49658 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A580940C2220195B00F49658 /* Alamofire.framework */; };
 		A5C1DC822295252300017E84 /* Cryptocurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C1DC812295252300017E84 /* Cryptocurrency.swift */; };
 		A5C1DC8C22C0F9D700017E84 /* FullScreenPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C1DC8B22C0F9D700017E84 /* FullScreenPage.swift */; };
-		A5FDFD9A232FA4C80013D0EA /* Cryptomoney.app in Resources */ = {isa = PBXBuildFile; fileRef = 1814F535220DA9E800AA5A26 /* Cryptomoney.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -169,7 +168,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A52E3A19226AEF18003FF156 /* .gitignore in Resources */,
-				A5FDFD9A232FA4C80013D0EA /* Cryptomoney.app in Resources */,
 				1814F543220DA9EA00AA5A26 /* LaunchScreen.storyboard in Resources */,
 				1814F540220DA9EA00AA5A26 /* Assets.xcassets in Resources */,
 				1814F53E220DA9E800AA5A26 /* Main.storyboard in Resources */,
