@@ -23,7 +23,6 @@ class MainScreenView: UIViewController, UITableViewDataSource, UITableViewDelega
         loadData()
         //self.tableViewMoney.rowHeight
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //tableViewMoney.dataSource = self
@@ -32,27 +31,27 @@ class MainScreenView: UIViewController, UITableViewDataSource, UITableViewDelega
         print("This is viewDidLoad")
         view.backgroundColor = UIColor.lightGray // change color
         //coinsLabel.text = "Cryptomoney"
-        
         loadData()
-        
     }
-    
+    var test = ""
     private func loadData() {
         print("loadData")
-        request ("https://api.coinmarketcap.com/v1/ticker").responseJSON { response in
+        request ("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?CMC_PRO_API_KEY=0a5b109a-5a84-4700-89f6-97b14d373aaf").responseJSON { response in
             guard response.result.isSuccess
                 else {
                     print("Ошибка при запросе данных с сайта \(String(describing: response.result.error))")
                     print(response)
                     return
             }
+            print(response)
             guard let arrayOfItems = response.result.value as? [[String:AnyObject]]
+                
                 else {
                     print("Не могу перевести в массив")
                     return
             }
+            print(arrayOfItems, "печатает массив преобразованных элементов")
             
-            print(arrayOfItems)
             for bustElements in arrayOfItems {
                 let item = Cryptocurrency(symbol: bustElements["symbol"] as! String, name: bustElements["name"] as! String, priceUsdLabel: bustElements["price_usd"] as! String, favoriteState: false)
                 // add new element cryptocurrency
