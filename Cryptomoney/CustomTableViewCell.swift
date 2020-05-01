@@ -36,10 +36,10 @@ class CustomTableViewCell: UITableViewCell {
     
     func draw(currency: Cryptocurrency) {
         self.currency = currency
-        symbolLabel.text = currency.symbol
+        //symbolLabel.text = currency.symbol
         nameLabel.text = currency.name
-        priceUsdLabel.text = currency.priceUsdLabel
-        favoriteState = currency.favoriteState
+        //priceUsdLabel.text = currency.priceUsdLabel
+        //favoriteState = currency.favoriteState
         changeState()
     }
     
