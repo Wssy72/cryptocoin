@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let navigation = UINavigationController(rootViewController: MainScreenView())
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()! 
+        let navigation = UINavigationController(rootViewController: vc) // MainScreenView()
         self.window?.rootViewController = navigation
         self.window?.makeKeyAndVisible()
         return true

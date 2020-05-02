@@ -34,14 +34,14 @@ class CustomTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func draw(currency: Cryptocurrency) {
-        self.currency = currency
+    //func draw(currency: Cryptocurrency) {
+     //   self.currency = currency
         //symbolLabel.text = currency.symbol
-        nameLabel.text = currency.name
+      //  nameLabel.text = currency.name
         //priceUsdLabel.text = currency.priceUsdLabel
         //favoriteState = currency.favoriteState
-        changeState()
-    }
+       // changeState()
+    //}
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

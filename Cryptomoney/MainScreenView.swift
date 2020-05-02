@@ -12,6 +12,7 @@ import Alamofire
 class MainScreenView: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
     var dataDecode = [Cryptocurrency]()
+    let cell = "cellReuseIdentifier"
     @IBOutlet weak var coinsLabel: UILabel!
     @IBOutlet weak var tableViewMoney: UITableView!
     
@@ -30,20 +31,20 @@ class MainScreenView: UIViewController, UITableViewDataSource, UITableViewDelega
         //tableViewMoney.delegate = self
         
         print("This is viewDidLoad")
-        view.backgroundColor = UIColor.lightGray // change color
+        view.backgroundColor = UIColor.systemGray // change color
         //coinsLabel.text = "Cryptomoney"
         loadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-        //currencies.count
+        return dataDecode.count
         // display count string in array
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
-        cell.textLabel!.text = "Cell text" //draw(currency: currencies[indexPath.row])
+      let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
+        cell. //draw(currency: dataDecode[indexPath.row])
+        
         return cell
     }
     
