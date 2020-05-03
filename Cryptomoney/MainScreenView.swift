@@ -12,7 +12,7 @@ import Alamofire
 class MainScreenView: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
     var dataDecode = [Cryptocurrency]()
-    let cell = "cellReuseIdentifier"
+    
     @IBOutlet weak var coinsLabel: UILabel!
     @IBOutlet weak var tableViewMoney: UITableView!
     
@@ -23,17 +23,19 @@ class MainScreenView: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func Update(_ sender: UIButton) {
         print("Update")
         loadData()
-        //self.tableViewMoney.rowHeight
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         //tableViewMoney.dataSource = self
         //tableViewMoney.delegate = self
-        
+        //self.tableViewMoney.rowHeight
         print("This is viewDidLoad")
         view.backgroundColor = UIColor.systemGray // change color
         //coinsLabel.text = "Cryptomoney"
+        
         loadData()
+        self.tableViewMoney.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,14 +45,19 @@ class MainScreenView: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
-        cell. //draw(currency: dataDecode[indexPath.row])
         
+        let moneyNumber = indexPath.row
+        let moneyData = dataDecode[moneyNumber]
+        
+        cell.nameLabel.text = moneyData.name //draw(currency: dataDecode[indexPath.row])
+        //cell.symbolLabel.text = "t"
         return cell
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
     
     private func loadData() {
         print("loadData")
@@ -77,24 +84,6 @@ class MainScreenView: UIViewController, UITableViewDataSource, UITableViewDelega
             }
         }
     }
-        
-           // guard let arrayOfItems = response.result.value as? [[String:AnyObject]]
-                
-            //    else {
-            //        print("Не могу перевести в массив")
-            //        return
-            //}
-            //print(arrayOfItems, "печатает массив преобразованных элементов")
-            
-            //for bustElements in arrayOfItems {
-                //let item = Cryptocurrency(symbol: bustElements["symbol"] as! String, name: bustElements["name"] as! String, priceUsdLabel: bustElements["price_usd"] as! String, favoriteState: false)
-                // add new element cryptocurrency
-                //self.currencies.append(item)
-            //}
-            //self.tableViewMoney.reloadData()
-        //}
-    
-    //bustElements["bool"] as!
    
 }
 

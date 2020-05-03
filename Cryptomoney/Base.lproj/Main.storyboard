@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="width" constant="375" id="zG5-wL-Cl1"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="12" reuseIdentifier="Cell" rowHeight="158" id="GRt-Vx-zxJ" customClass="CustomTableViewCell" customModule="Cryptomoney" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="12" reuseIdentifier="cell" rowHeight="158" id="GRt-Vx-zxJ" customClass="CustomTableViewCell" customModule="Cryptomoney" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="158"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GRt-Vx-zxJ" id="YSr-J5-qaI">

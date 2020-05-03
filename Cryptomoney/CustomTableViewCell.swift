@@ -10,14 +10,14 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
     
-    @IBOutlet private weak var symbolLabel: UILabel!
-    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet var symbolLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
     @IBOutlet private weak var priceUsdLabel: UILabel!
     @IBOutlet private weak var favoriteButton: UIButton!
     var favoriteState = false
     var cellState = false
     
-    private var currency: Cryptocurrency?
+    //private var currency: Cryptocurrency?
     
     func changeState() {
         if favoriteState {
