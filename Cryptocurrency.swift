@@ -17,9 +17,9 @@
  let name: String
  }
 
-// struct quote: Decodable {
-// let USD: [String]
+struct quote: Decodable {
+let USD: [String]
 //
 // struct USD: Decodable {
 // let price: Double
-// }
+}
