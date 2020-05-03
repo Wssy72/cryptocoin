@@ -25,10 +25,8 @@ class MainScreenView: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tableViewMoney.dataSource = self
-        //tableViewMoney.delegate = self
-        //self.tableViewMoney.rowHeight
         print("This is viewDidLoad")
+        title = "Cryptomoney"
         view.backgroundColor = UIColor.systemGray // change color
         //coinsLabel.text = "Cryptomoney"
         
@@ -48,7 +46,7 @@ class MainScreenView: UIViewController, UITableViewDataSource, UITableViewDelega
         let moneyData = dataDecode[moneyNumber]
         
         cell.nameLabel.text = moneyData.name //draw(currency: dataDecode[indexPath.row])
-        //cell.symbolLabel.text = "t"
+        cell.symbolLabel.text = moneyData.symbol
         return cell
     }
     

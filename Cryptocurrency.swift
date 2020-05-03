@@ -13,7 +13,7 @@
 //}
 
  struct Cryptocurrency: Decodable {
- //let circulating_supply: Int
+ let symbol: String
  let name: String
  }
 
