@@ -18,8 +18,6 @@ class MainScreenView: UIViewController, UITableViewDataSource, UITableViewDelega
     
     //var currencies = [Cryptocurrency]()
     
-//    var addCoinsInFavorites = item[]
-    
     @IBAction func Update(_ sender: UIButton) {
         print("Update")
         loadData()
@@ -35,7 +33,7 @@ class MainScreenView: UIViewController, UITableViewDataSource, UITableViewDelega
         //coinsLabel.text = "Cryptomoney"
         
         loadData()
-        self.tableViewMoney.reloadData()
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -77,6 +75,10 @@ class MainScreenView: UIViewController, UITableViewDataSource, UITableViewDelega
                     let answerData = answer.data
                     self.dataDecode.append(contentsOf: answerData)
                     
+                    DispatchQueue.main.async {
+                        self.tableViewMoney.reloadData()
+                        print("прошу tableview перезагрузить данные")
+                    }
                     print(answer)
                 } catch {
                     print(error)
