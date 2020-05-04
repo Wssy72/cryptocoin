@@ -16,27 +16,21 @@ class MainScreenView: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var coinsLabel: UILabel!
     @IBOutlet weak var tableViewMoney: UITableView!
     
-    //var currencies = [Cryptocurrency]()
-    
     @IBAction func Update(_ sender: UIButton) {
         print("Update")
         loadData()
-        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         print("This is viewDidLoad")
         title = "Cryptomoney"
         view.backgroundColor = UIColor.systemGray // change color
-        //coinsLabel.text = "Cryptomoney"
-        
         loadData()
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataDecode.count
-        // display count string in array
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
