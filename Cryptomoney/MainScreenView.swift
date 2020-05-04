@@ -24,7 +24,7 @@ class MainScreenView: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         print("This is viewDidLoad")
         title = "Cryptomoney"
-        view.backgroundColor = UIColor.systemGray // change color
+        //view.backgroundColor = UIColor.systemGray // change color
         loadData()
     }
     
@@ -39,9 +39,11 @@ class MainScreenView: UIViewController, UITableViewDataSource, UITableViewDelega
         let moneyNumber = indexPath.row
         let moneyData = dataDecode[moneyNumber]
         
+        let priceFloat = Float(moneyData.quote.USD.price)
+    
         cell.nameLabel.text = moneyData.name
         cell.symbolLabel.text = moneyData.symbol
-        cell.priceUsdLabel.text = String(moneyData.quote.USD.price)
+        cell.priceUsdLabel.text = String(priceFloat)
         return cell
     }
     
