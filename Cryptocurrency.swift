@@ -15,11 +15,13 @@
  struct Cryptocurrency: Decodable {
  let symbol: String
  let name: String
+ let quote: SwiftQuote
  }
 
-struct quote: Decodable {
-let USD: [String]
-//
-// struct USD: Decodable {
-// let price: Double
+struct SwiftQuote: Decodable {
+let USD: PriseInfo
+}
+
+struct PriseInfo: Decodable {
+    let price: Double
 }

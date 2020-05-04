@@ -12,7 +12,7 @@ class CustomTableViewCell: UITableViewCell {
     
     @IBOutlet var symbolLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
-    @IBOutlet private weak var priceUsdLabel: UILabel!
+    @IBOutlet var priceUsdLabel: UILabel!
     @IBOutlet private weak var favoriteButton: UIButton!
     var favoriteState = false
     var cellState = false

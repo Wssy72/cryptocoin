@@ -45,15 +45,15 @@ class MainScreenView: UIViewController, UITableViewDataSource, UITableViewDelega
         let moneyNumber = indexPath.row
         let moneyData = dataDecode[moneyNumber]
         
-        cell.nameLabel.text = moneyData.name //draw(currency: dataDecode[indexPath.row])
+        cell.nameLabel.text = moneyData.name
         cell.symbolLabel.text = moneyData.symbol
+        cell.priceUsdLabel.text = String(moneyData.quote.USD.price)
         return cell
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
     
     private func loadData() {
         print("loadData")
