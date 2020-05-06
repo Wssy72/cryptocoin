@@ -3,5 +3,5 @@ platform :ios, '12.0'
 use_frameworks!
 
 target 'Cryptomoney' do
-  pod 'Alamofire', '~> 5.1'
+  pod 'Alamofire', '~> 4.0'
 end
